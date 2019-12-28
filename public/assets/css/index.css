@@ -48,6 +48,7 @@ body {
     height: 200px;
     font-size: 1rem;
     outline: darkgray auto 1px;
+    padding: 10px;
 }
 
 .main-content textarea:focus {
