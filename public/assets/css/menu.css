@@ -4,7 +4,7 @@
     flex-direction: row;
 }
  .logo {
-    flex: 2;
+    flex: 3;
     background-color: #7940c5;
     color: #fff;
     vertical-align: middle;
@@ -25,7 +25,7 @@
 .topnav {
     overflow: hidden;
     background-color: #7940c5;
-    flex: 1;
+    flex: 2;
     vertical-align: middle;
   }
   
