@@ -9,10 +9,11 @@ body {
     display: flex;
     flex-direction: column;
     text-align: center;
+    padding: 1rem;
 }
 
 .banner h1 {
-    font-size: 2.5rem;
+    font-size: 3rem;
     color: #fff;
     margin-block-start: 0em;
     margin-block-end: 0em;
@@ -32,6 +33,7 @@ body {
     border-radius: 2px;
     text-align: center;
     padding: 15px;
+    min-width: 320px;
 }
 
 .main-content h1, h2, label, input, select {
@@ -98,3 +100,9 @@ body {
     justify-content: center;
     width: 90%;
 }
+
+@media screen and (max-width: 900px) {
+    .button-container {
+        flex-direction: column;
+    }
+  }
