@@ -23,7 +23,7 @@ body {
     color: #111;
 }
 .main-content {
-    min-height: 400px;
+    min-height: 500px;
     max-width: 960px;
     background-color: #fff;
     box-shadow: 5px 5px 5px 5px rgba(0,0,0,0.2);
@@ -45,7 +45,8 @@ body {
     margin-left: auto;
     margin-right: auto;
     display: block;
-    height: 200px;
+    height: 300px;
+    min-height: 200px;
     font-size: 1rem;
     outline: darkgray auto 1px;
     padding: 10px;
@@ -90,6 +91,7 @@ body {
     color: #fff;
     padding: 2rem;
     vertical-align: middle;
+    
 }
 
 .button-container {
@@ -106,5 +108,15 @@ body {
 @media screen and (max-width: 900px) {
     .button-container {
         flex-direction: column;
+    }
+  }
+
+  @media screen and (min-height:768px) {
+    .footer {
+        flex-direction: column;
+        position: fixed;
+        width: 100%;
+        bottom: 0px;
+        left: 0px;
     }
   }
