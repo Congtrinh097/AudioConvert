@@ -7,6 +7,8 @@
     <title>Giọng đọc </title>
     <link type="text/css" rel="stylesheet" href="./assets/css/index.css">
     <link type="text/css" rel="stylesheet" href="./assets/css/menu.css">
+    <script src='./assets/js/voicerss-tts.min.js'></script>
+    <script src='./assets/js/menu.js'></script>
 </head>
 
 <body>
@@ -37,143 +39,45 @@
         <div class="main-content">
             <h2>Chuyển đổi văn bản thành âm thanh </h2>
             <h3>Phiên bản miển phí sẽ giới hạn 500 kí tự với giọng đọc chuẩn, Chỉ cho mục đích các nhân.</h3>
-            <textarea name="text" id="textConvert" placeholder="Nhập văn bản muốn chuyển đổi tại đây"></textarea>
+            <textarea name="text" id="textConvert" placeholder="Nhập văn bản muốn chuyển đổi tại đây" required></textarea>
             <div class="button-container">
                 <label>Ngôn ngữ</label>
-                <select name="voice" style="width:250px">
-                    <option value="en-US-Standard-B" selected="SELECTED">English(US) Standart - Rick</option>
-                    <option value="en-US-Standard-C">English(US) Standart - Lucy</option>
-                    <option value="en-US-Standard-D">English(US) Standart - David</option>
-                    <option value="en-US-Standard-E">English(US) Standart - Kate</option>
-
-                    <option value="en-US-Wavenet-D" disabled="">English(US) Premium - David</option>
-                    <option value="en-US-Wavenet-E" disabled="">English(US) Premium - Kate</option>
-                    <option value="en-US-Wavenet-F" disabled="">English(US) Premium - Rina</option>
-
-                    <option value="en-GB-Standard-A">English(UK) - Lola</option>
-                    <option value="en-GB-Standard-B">English(UK) - Donald</option>
-                    <option value="en-GB-Standard-C">English(UK) - Gabriela</option>
-                    <option value="en-GB-Standard-D">English(UK) - Daniel</option>
-
-
-                    <option value="en-AU-Standard-A">English(AU) - Kia</option>
-                    <option value="en-AU-Standard-B">English(AU) - William</option>
-                    <option value="en-AU-Standard-C">English(AU) - Olivia</option>
-                    <option value="en-AU-Standard-D">English(AU) - Noah</option>
-
-                    <option value="en-IN-Standard-A">English(IN) - Pari</option>
-                    <option value="en-IN-Standard-B">English(IN) - Aditya</option>
-                    <option value="en-IN-Standard-C">English(IN) - Ansh</option>
-
-
-                    <option value="de-DE-Standard-A">Deutsch - Anika</option>
-                    <option value="de-DE-Standard-B">Deutsch - Markus </option>
-
-                    <option value="fr-FR-Standard-A">French - Marie </option>
-                    <option value="fr-FR-Standard-B">French - Thomas </option>
-                    <option value="fr-FR-Standard-C">French - Chloé </option>
-                    <option value="fr-FR-Standard-D">French - Julien </option>
-
-                    <option value="fr-CA-Standard-A">French(CA) - Samantha </option>
-                    <option value="fr-CA-Standard-B">French(CA)- Simon </option>
-                    <option value="fr-CA-Standard-C">French(CA) - Jade </option>
-                    <option value="fr-CA-Standard-D">French(CA) - Nicolas </option>
-
-
-                    <option value="it-IT-Standard-A">Italian - Maria </option>
-                    <option value="it-IT-Standard-B">Italian - Rosa </option>
-                    <option value="it-IT-Standard-C">Italian - Marco</option>
-                    <option value="it-IT-Standard-D">Italian - Stefano</option>
-
-                    <option value="nl-NL-Standard-A">Dutch(Nederland) - Bente </option>
-                    <option value="nl-NL-Standard-B">Dutch - Adrianus </option>
-                    <option value="nl-NL-Standard-C">Dutch - Dirk </option>
-                    <option value="nl-NL-Standard-D">Dutch - Jade </option>
-                    <option value="nl-NL-Standard-E">Dutch - Lara </option>
-
-                    <option value="ja-JP-Standard-A">Japanese 日本語（日本) - Aika </option>
-                    <option value="ja-JP-Standard-B">Japanese - Aki </option>
-                    <option value="ja-JP-Standard-C">Japanese - Akemi </option>
-                    <option value="ja-JP-Standard-D">Japanese - Akihiro </option>
-
-                    <option value="tr-TR-Standard-A">Turkish - Ayrıca </option>
-                    <option value="tr-TR-Standard-B">Turkish - Adnan </option>
-                    <option value="tr-TR-Standard-C">Turkish - Rüya </option>
-                    <option value="tr-TR-Standard-D">Turkish - Ahu </option>
-                    <option value="tr-TR-Standard-E">Turkish - Mustafa </option>
-
-
-                    <option value="ru-RU-Standard-A">Russian - Яна </option>
-                    <option value="ru-RU-Standard-B">Russian - Денис </option>
-                    <option value="ru-RU-Standard-C">Russian - Алиса </option>
-                    <option value="ru-RU-Standard-D">Russian - Дима </option>
-
-                    <option value="pt-PT-Standard-A">Portuguese - Carolina </option>
-                    <option value="pt-PT-Standard-B">Portuguese - Adriano </option>
-                    <option value="pt-PT-Standard-C">Portuguese - Afonso </option>
-                    <option value="pt-PT-Standard-D">Portuguese - Renata </option>
-
-                    <option value="pl-PL-Standard-A">Polish - Ada </option>
-                    <option value="pl-PL-Standard-B">Polish - Patryk </option>
-                    <option value="pl-PL-Standard-C">Polish - Tomek </option>
-                    <option value="pl-PL-Standard-D">Polish - Julia </option>
-                    <option value="pl-PL-Standard-E">Polish - Karolina </option>
-
-                    <option value="vi-VN-Standard-A">Vietnamese - Nguyen </option>
-                    <option value="vi-VN-Standard-B">Vietnamese- Huy </option>
-                    <option value="vi-VN-Standard-C">Vietnamese - My </option>
-                    <option value="vi-VN-Standard-D">Vietnamese - Van </option>
-
-                    <option value="ko-KR-Standard-A">Korean - Chaewon</option>
-                    <option value="ko-KR-Standard-B">Korean - Daeun </option>
-                    <option value="ko-KR-Standard-C">Korean - Dohyun </option>
-                    <option value="ko-KR-Standard-D">Korean - Jiho </option>
-
-                    <option value="id-ID-Standard-A">Indonesian - Putri</option>
-                    <option value="id-ID-Standard-B">Indonesian - Kevin </option>
-                    <option value="id-ID-Standard-C">Indonesian - Rio </option>
-
-                    <option value="hi-IN-Standard-A">Hindi - Ananda</option>
-                    <option value="hi-IN-Standard-B">Hindi - Arnav </option>
-                    <option value="hi-IN-Standard-C">Hindi - Aditya </option>
-
-                    <option value="nb-NO-Standard-E">Norwegian - Anna </option>
-                    <option value="nb-NO-Standard-A">Norwegian - Agot </option>
-                    <option value="nb-NO-Standard-B">Norwegian - Aksel </option>
-                    <option value="nb-NO-Standard-C">Norwegian - Ase </option>
-                    <option value="nb-NO-Standard-D">Norwegian - Aleksander </option>
-
-                    <option value="ar-XA-Standard-A">Arabic - Layla </option>
-                    <option value="ar-XA-Standard-B">Arabic - Abbad </option>
-                    <option value="ar-XA-Standard-C">Arabic - Adeel </option>
-
-                    <option value="cmn-CN-Standard-A">Mandarin Chinese - Ah Cy </option>
-                    <option value="cmn-CN-Standard-B">Mandarin Chinese - Chang </option>
-                    <option value="cmn-CN-Standard-C">Mandarin Chinese - Bai </option>
-
-
-                    <option value="sv-SE-Wavenet-A">Swedish - Albin </option>
-                    <option value="cs-CZ-Wavenet-A">Czech - Ada </option>
-                    <option value="el-GR-Wavenet-A">Greece- Adonis </option>
-
-                    <option value="fil-PH-Standard-A">Philippines - Nicole </option>
-
-                    <option value="da-DK-Wavenet-A">Danish - Aase </option>
-
+                <select name="voice" id="langCode" style="width:250px">
+                    <option value="en-us" selected="SELECTED">English (United States)</option>
+                    <option value="ca-es">Catalan</option>
+                    <option value="zh-cn">Chinese (China)</option>
+                    <option value="zh-hk">Chinese (Hong Kong)</option>
+                    <option value="zh-tw">Chinese (Taiwan)</option>
+                    <option value="da-dk">Danist</option>
+                    <option value="nl-nl">Dutch</option>
+                    <option value="en-au">English (Australia)</option>
+                    <option value="en-ca">English (Canada)</option>
+                    <option value="en-gb">English (Great Britain)</option>
+                    <option value="en-in">English (India)</option>
+                    <option value="fi-fi">Finnish</option>
+                    <option value="fr-ca">French (Canada)</option>
+                    <option value="fr-fr">French (France)</option>
+                    <option value="de-de">German</option>
+                    <option value="it-it">Italian</option>
+                    <option value="ja-jp">Japanese</option>
+                    <option value="ko-kr">Korean</option>
+                    <option value="nb-no">Norwegian</option>
+                    <option value="pl-pl">Polish</option>
+                    <option value="pt-br">Portuguese (Brazil)</option>
+                    <option value="pt-pt">Portuguese (Portugal)</option>
+                    <option value="ru-ru">Russian</option>
+                    <option value="es-mx">Spanish (Mexico)</option>
+                    <option value="es-es">Spanish (Spain)</option>
+                    <option value="sv-se">	Swedish (Sweden)</option>
                 </select>
-                <label>Tộc độ đọc</label>
-                <select name="speed" style="width:80px">
-
-                    <option value="1" selected="SELECTED">1</option>
-                    <option value="0.3">0.3</option>
-                    <option value="0.6">0.6</option>
-                    <option value="0.8">0.8</option>
-
-                    <option value="1.3">1.3</option>
-                    <option value="1.6">1.6</option>
-                    <option value="2">2</option>
+                <label>Định dạng</label>
+                <select name="format" style="width:80px" id="format">
+                    <option value="MP3" selected="SELECTED">MP3</option>
+                    <option value="WAV">WAV</option>
+                    <option value="OGG">OGG</option>
+                    <option value="CAF">CAF</option>
                 </select>
-                <input class="btn-convert" type="button" value="Chuyển">
+                <input class="btn-convert" type="button" value="Chuyển" onclick="convert()">
             </div>
         </div>
         <!-- Footer -->
